@@ -1,7 +1,6 @@
 const express = require( 'express' );
 
-const app = express();
-app.use( express.json() )
+const routes = express.Router();
 
 /**
  * Rota: http://localhost:3333/users
@@ -31,7 +30,7 @@ app.use( express.json() )
  * Query Builder ( KNEXJS ): table( "users" ).select( "*" ).where(  )
  */
 
-app.post( '/users', ( req, res ) => {
+routes.post( '/users', ( req, res ) => {
   const body = req.body;
 
   console.log( body );
@@ -42,4 +41,4 @@ app.post( '/users', ( req, res ) => {
   });
 } )
 
-app.listen( 3333 );
+module.exports = routes;
