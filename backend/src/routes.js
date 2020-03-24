@@ -1,4 +1,7 @@
 const express = require( 'express' );
+const crypto = require( 'crypto' );
+
+const connection = require( './database/connection' );
 
 const routes = express.Router();
 
@@ -30,15 +33,14 @@ const routes = express.Router();
  * Query Builder ( KNEXJS ): table( "users" ).select( "*" ).where(  )
  */
 
-routes.post( '/users', ( req, res ) => {
-  const body = req.body;
+routes.post( '/ongs', ( req, res ) => {
+  const { name, email, whatsapp, city, uf } = req.body;
 
-  console.log( body );
+  const id = crypto.randomBytes( 4 ).toString( 'HEX' );
 
-  return res.json({
-    event: 'Semana OmniStack 11.0',
-    aluno: 'Eliane Nunes'
-  });
+  console.log( data );
+
+  return res.json();
 } )
 
 module.exports = routes;
