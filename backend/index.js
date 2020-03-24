@@ -24,10 +24,12 @@ app.use( express.json() )
  * POST http://localhost:3333/users -> ('/users') { req.body }
  *
  * [ Bancos de Dados ]
- * SQL: MySQL, SQLite, PostgreSQL, Oracle, Microsoft SQL Server
+ * SQL: MySQL, { SQLite }, PostgreSQL, Oracle, Microsoft SQL Server
  * NoSQL: MongoDB, CouchDB, etc
+ *
+ * Driver: SELECT * FROM users
+ * Query Builder ( KNEXJS ): table( "users" ).select( "*" ).where(  )
  */
-
 
 app.post( '/users', ( req, res ) => {
   const body = req.body;
