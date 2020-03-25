@@ -2,7 +2,7 @@ import React from 'react';
 
 import './global.css';
 
-import Logon from './pages/Logon';
+import Routes from './routes';
 
 /**
  * JSX ( JavaScript + XML )
@@ -19,7 +19,7 @@ import Logon from './pages/Logon';
 
 function App() {
   return (
-    <Logon />
+    <Routes />
   );
 }
 
