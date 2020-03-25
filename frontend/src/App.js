@@ -1,8 +1,13 @@
 import React from 'react';
 
+import Header from './Header';
+
+// JSX ( JavaScript + XML )
+// Componentes = Conjunto de funções
+
 function App() {
   return (
-    <h1>Hello Xibata!</h1>
+    <Header title="Semana Omnistack" />
   );
 }
 
