@@ -8,7 +8,7 @@
 
 #### O Projeto
 <p align="justify">
-Como existem ONGs com baixa visibilidade, a [Rocketseat](https://github.com/Rocketseat) propoem
+  Como existem ONGs com baixa visibilidade, a <a href="https://github.com/Rocketseat">Rocketseat</a> propoem
 uma ideia social para esta versão da OmniStack11 que é tornar cada vez mais acessivel o conhecimento
 sobre as ONGs existentes, seja no bairro, cidade, estado ou país. Possíbilitando a interação entre
 pessoas comuns e as necessidades de cada ONG.
@@ -23,6 +23,6 @@ _Backend:_ ``` NodeJs ```<br>
 _Frontend:_ ``` ReactJs ```<br>
 _Mobile:_ ``` ReactNative & Expo```<br>
 
-Todos os dados serão armazenados em banco __SQL__ relacional.
+Todos os dados serão armazenados em banco __SQL__ relacional ( __SQLite__ ).
 
 #### That's all folks! 
