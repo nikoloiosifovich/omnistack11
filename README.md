@@ -23,6 +23,6 @@ _Backend:_ ``` NodeJs ```<br>
 _Frontend:_ ``` ReactJs ```<br>
 _Mobile:_ ``` ReactNative & Expo```<br>
 
-Todos os dados serão armazenados em banco __SQL__ relacional.
+Todos os dados serão armazenados em banco __SQL__ relacional ( SQLite ).
 
 #### That's all folks! 
