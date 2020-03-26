@@ -70,3 +70,7 @@ __Instalação de pacotes de icones__
 __Instalação do gerenciador de rotas__
 
 ``` npm install react-router-dom ```
+
+__Instalação axios para consumir os dados do backend__
+
+``` npm install axios ```
