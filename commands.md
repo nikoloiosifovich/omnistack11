@@ -83,7 +83,7 @@ __Instalação do Expo em modo global__
 
 __Incialização do projeto mobile__
 
-``` expo init mobile ```
+``` expo init mobile --npm```
 ``` select: blank ```
 
 __Entra na pasta mobile__
@@ -92,7 +92,7 @@ __Entra na pasta mobile__
 
 __Executando o projeto mobile__
 
-``` expo start ```
+``` npm start ```
 
 __Instalação da biblioteca ReactNavigation para o expo__
 
