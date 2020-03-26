@@ -62,3 +62,11 @@ __Acessar a pasta do frontend__
 __Para executar a aplicação__
 
 ``` npm start ```
+
+__Instalação de pacotes de icones__
+
+``` npm install react-icons ```
+
+__Instalação do gerenciador de rotas__
+
+``` npm install react-router-dom ```
