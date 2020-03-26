@@ -112,3 +112,7 @@ __Instalação do pacote expo-constants__
 __Instalação do pacote para envio de emails__
 
 ``` expo install expo-mail-composer ```
+
+__Instalação axios para consumir os dados do backend__
+
+``` npm install axios ```
