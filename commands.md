@@ -74,3 +74,23 @@ __Instalação do gerenciador de rotas__
 __Instalação axios para consumir os dados do backend__
 
 ``` npm install axios ```
+
+## [MOBILE - ReactNative]:
+
+__Instalação do Expo em modo global__
+
+``` npm install -g expo-cli ```
+
+__Incialização do projeto mobile__
+
+``` expo init mobile ```
+``` select: blank ```
+
+__Entra na pasta mobile__
+
+``` cd mobile ```
+
+__Executando o projeto mobile__
+
+``` yarn start ```
+
