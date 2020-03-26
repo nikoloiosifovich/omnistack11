@@ -104,3 +104,7 @@ __Instalação das dependencias da biblioteca ReactNavigation para o expo__
 __Instalação do StackNavigation (Nota: Existem outras formas de navegação, essa é a mais simples - por botões)__
 
 ``` npm install @react-navigation/stack ```
+
+__Instalação do pacote expo-constants__
+
+``` expo install expo-constants ```
