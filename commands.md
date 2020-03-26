@@ -108,3 +108,7 @@ __Instalação do StackNavigation (Nota: Existem outras formas de navegação, e
 __Instalação do pacote expo-constants__
 
 ``` expo install expo-constants ```
+
+__Instalação do pacote para envio de emails__
+
+``` expo install expo-mail-composer ```
