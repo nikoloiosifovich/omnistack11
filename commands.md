@@ -92,5 +92,15 @@ __Entra na pasta mobile__
 
 __Executando o projeto mobile__
 
-``` yarn start ```
+``` expo start ```
 
+__Instalação da biblioteca ReactNavigation para o expo__
+
+````npm install @react-navigation/native ```
+
+__Instalação das dependencias da biblioteca ReactNavigation para o expo__
+``` expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view ```
+
+__Instalação do StackNavigation (Nota: Existem outras formas de navegação, essa é a mais simples - por botões)__
+
+``` npm install @react-navigation/stack ```
