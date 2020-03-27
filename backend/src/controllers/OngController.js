@@ -1,31 +1,28 @@
-const connection = require( '../database/connection' );
-const crypto = require( 'crypto' );
+const connection = require("../database/connection");
+
+const generateUniqueId = require("../utils/generateUniqueId");
 
 module.exports = {
+  async index(req, res) {
+    const ongs = await connection("ongs").select("*");
 
-  async index( req, res ) {
-    const ongs = await connection( 'ongs' ).select( '*' );
-
-    return res.json( ongs );
+    return res.json(ongs);
   },
 
-  async create( req, res ) {
-
+  async create(req, res) {
     const { name, email, whatsapp, city, uf } = req.body;
 
-    const id = crypto.randomBytes( 4 ).toString( 'HEX' );
+    const id = generateUniqueId();
 
-    await connection( 'ongs' ).insert({
+    await connection("ongs").insert({
       id,
       name,
       email,
       whatsapp,
       city,
-      uf,
+      uf
     });
 
     return res.json({ id });
-
   }
-
 };
