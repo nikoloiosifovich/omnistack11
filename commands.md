@@ -51,11 +51,19 @@
 
 ### [ BACKEND - > Validações < ]
 
-**Instalação da biblioteca de validações**
+**Instalação da biblioteca para validações**
 
 > O celebrate usa a lib hapi/joi para fazer a validações, ele integra o joi ao express
 
 `npm install celebrate`
+
+**Instalando da biblioteca para TDD**
+
+`npm install jest`
+
+**Inicializando o jest no backend**
+
+`npx jest --init` ( Y -> node -> N -> Y )
 
 ## [PRONTEND - ReactJS]:
 
