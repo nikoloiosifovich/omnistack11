@@ -116,3 +116,7 @@ __Instalação do pacote para envio de emails__
 __Instalação axios para consumir os dados do backend__
 
 ``` npm install axios ```
+
+__Instalação do pacote intl para formatação de moeda__
+
+``` npm install intl ```
