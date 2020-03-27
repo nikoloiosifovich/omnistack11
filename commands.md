@@ -57,13 +57,17 @@
 
 `npm install celebrate`
 
-**Instalando da biblioteca para TDD**
+**Instalação da biblioteca para TDD**
 
 `npm install jest`
 
 **Inicializando o jest no backend**
 
 `npx jest --init` ( Y -> node -> N -> Y )
+
+**Instalação da biblioteca para controle de estado de desenvolvimento do projeto**
+
+`npm install cross-env`
 
 ## [PRONTEND - ReactJS]:
 
