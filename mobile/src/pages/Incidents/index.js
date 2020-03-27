@@ -13,6 +13,9 @@ export default function Incidents() {
   const [ incidents, setIncidents ] = useState([]);
   const [ total, setTotal ] = useState(0);
 
+  const [ page, setPage ] = useState(1);
+  const [ loading, setLoading ] = useState(false);
+
   const navigation = useNavigation();
 
   function navigateToDetail( incident ) {
@@ -20,10 +23,24 @@ export default function Incidents() {
   }
 
   async function loadIncidents() {
-    const res = await api.get('incidents');
+    if ( loading ) {
+      return;
+    }
 
-    setIncidents( res.data );
+    if ( total > 0 && incidents.length === total ) {
+      return;
+    }
+
+    setLoading(true);
+
+    const res = await api.get('incidents', {
+      params: { page }
+    });
+
+    setIncidents([ ...incidents, ...res.data ]); // anexando dois vetores em um unico vetor no react
     setTotal( res.headers[ 'x-total-count' ] );
+    setPage( page + 1 );
+    setLoading(false);
   }
 
   useEffect( () => {
@@ -49,7 +66,9 @@ export default function Incidents() {
         style={ styles.incidentList }
         data={ incidents }
         keyExtractor={ incident => String( incident.id ) }
-        showsVerticalScrollIndicator={ false }
+        // showsVerticalScrollIndicator={ false }
+        onEndReached={ loadIncidents }
+        onEndReachedThreshold={ 0.2 } // a 20% do final da lista, traga novos itens
         renderItem={ ({ item: incident }) => (
           <View style={ styles.incident }>
 
