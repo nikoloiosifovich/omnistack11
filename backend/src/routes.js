@@ -36,7 +36,15 @@ const routes = express.Router();
  * Query Builder ( KNEXJS ): table( "users" ).select( "*" ).where(  )
  */
 
-routes.post("/sessions", SessionController.create);
+routes.post(
+  "/sessions",
+  celebrate({
+    [Segments.BODY]: Joi.object().keys({
+      id: Joi.string().required()
+    })
+  }),
+  SessionController.create
+);
 
 routes.get("/ongs", OngController.index);
 routes.post(
@@ -60,9 +68,43 @@ routes.post(
   OngController.create
 );
 
-routes.get("/incidents", IncidentController.index);
-routes.post("/incidents", IncidentController.create);
-routes.delete("/incidents/:id", IncidentController.delete);
+routes.get(
+  "/incidents",
+  celebrate({
+    [Segments.QUERY]: Joi.object().keys({ page: Joi.number() })
+  }),
+  IncidentController.index
+);
+routes.post(
+  "/incidents",
+  celebrate({
+    [Segments.HEADERS]: Joi.object({
+      authorization: Joi.string().required()
+    }).unknown()
+  }),
+  celebrate({
+    [Segments.BODY]: Joi.object().keys({
+      title: Joi.string().required(),
+      description: Joi.string().required(),
+      value: Joi.number().required()
+    })
+  }),
+  IncidentController.create
+);
+routes.delete(
+  "/incidents/:id",
+  celebrate({
+    [Segments.HEADERS]: Joi.object({
+      authorization: Joi.string().required()
+    }).unknown()
+  }),
+  celebrate({
+    [Segments.PARAMS]: Joi.object().keys({
+      id: Joi.number().required()
+    })
+  }),
+  IncidentController.delete
+);
 
 routes.get(
   "/profile",
