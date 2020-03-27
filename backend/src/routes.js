@@ -1,9 +1,10 @@
-const express = require( 'express' );
+const express = require("express");
+const { celebrate, Segments, Joi } = require("celebrate");
 
-const OngController = require( './controllers/OngController' );
-const IncidentController = require( './controllers/IncidentController' );
-const ProfileController = require( './controllers/ProfileController' );
-const SessionController = require( './controllers/SessionController' );
+const OngController = require("./controllers/OngController");
+const IncidentController = require("./controllers/IncidentController");
+const ProfileController = require("./controllers/ProfileController");
+const SessionController = require("./controllers/SessionController");
 
 const routes = express.Router();
 
@@ -35,15 +36,34 @@ const routes = express.Router();
  * Query Builder ( KNEXJS ): table( "users" ).select( "*" ).where(  )
  */
 
-routes.post( '/sessions', SessionController.create );
+routes.post("/sessions", SessionController.create);
 
-routes.get( '/ongs', OngController.index );
-routes.post( '/ongs', OngController.create );
+routes.get("/ongs", OngController.index);
+routes.post(
+  "/ongs",
+  celebrate({
+    [Segments.BODY]: Joi.object().keys({
+      name: Joi.string().required(),
+      email: Joi.string()
+        .email()
+        .required(),
+      whatsapp: Joi.number()
+        .min(13)
+        .max(13)
+        .required(),
+      city: Joi.string().required(),
+      uf: Joi.string()
+        .length(2)
+        .required()
+    })
+  }),
+  OngController.create
+);
 
-routes.get( '/incidents', IncidentController.index );
-routes.post( '/incidents', IncidentController.create );
-routes.delete( '/incidents/:id', IncidentController.delete );
+routes.get("/incidents", IncidentController.index);
+routes.post("/incidents", IncidentController.create);
+routes.delete("/incidents/:id", IncidentController.delete);
 
-routes.get( '/profile', ProfileController.index );
+routes.get("/profile", ProfileController.index);
 
 module.exports = routes;

@@ -1,122 +1,130 @@
 ## [BACKEND - NodeJS]:
 
-__Criar a pasta backend e acessa-lá__
+**Criar a pasta backend e acessa-lá**
 
-``` mkdir backend && cd backend ```
+`mkdir backend && cd backend`
 
-__Iniciar o npm__
+**Iniciar o npm**
 
-``` npm init -y ```
+`npm init -y`
 
-__Instalar o micro-framework__
+**Instalar o micro-framework**
 
-``` npm install express ```
+`npm install express`
 
-__Criar o index.js, ponto de partida da aplicação__
+**Criar o index.js, ponto de partida da aplicação**
 
-``` touch index.js ```
+`touch index.js`
 
-__Para executar a aplicação__
+**Para executar a aplicação**
 
-``` node index.js ```
+`node index.js`
 
-__Autoloader para o node server em modo desenvolvimento__
+**Autoloader para o node server em modo desenvolvimento**
 
-``` npm install nodemon -D ```
+`npm install nodemon -D`
 
-__Configuração do banco de dados__
+**Configuração do banco de dados**
 
-``` npm install knex --save ```
-``` npm install sqlite3 --save ```
+`npm install knex --save`
+`npm install sqlite3 --save`
 
-__Executar o pacote knex__
+**Executar o pacote knex**
 
-``` npx knex init ```
+`npx knex init`
 
-__Criando as migrations das tabelas para o banco de dados__
+**Criando as migrations das tabelas para o banco de dados**
 
-``` npx knex migrate:make 'create_ongs' ``` _*create_ongs é o nome dado ao evento*_
+`npx knex migrate:make 'create_ongs'` _*create_ongs é o nome dado ao evento*_
 
-__Criando a tabela__
+**Criando a tabela**
 
-``` npx knex migrate:latest ```
+`npx knex migrate:latest`
 
-__Voltar a criação da última tabela__
+**Voltar a criação da última tabela**
 
-``` npx knex migrate:rollback ```
+`npx knex migrate:rollback`
 
-__Instalando recurso de segurança contra acesso não autorizado__
+**Instalando recurso de segurança contra acesso não autorizado**
 
-``` npm install cors ```
+`npm install cors`
+
+### [ BACKEND - > Validações < ]
+
+**Instalação da biblioteca de validações**
+
+> O celebrate usa a lib hapi/joi para fazer a validações, ele integra o joi ao express
+
+`npm install celebrate`
 
 ## [PRONTEND - ReactJS]:
 
-__Iniciar o npx__
+**Iniciar o npx**
 
-``` npx create-react-app frontend```
+`npx create-react-app frontend`
 
-__Acessar a pasta do frontend__
+**Acessar a pasta do frontend**
 
-``` cd frontend ```
+`cd frontend`
 
-__Para executar a aplicação__
+**Para executar a aplicação**
 
-``` npm start ```
+`npm start`
 
-__Instalação de pacotes de icones__
+**Instalação de pacotes de icones**
 
-``` npm install react-icons ```
+`npm install react-icons`
 
-__Instalação do gerenciador de rotas__
+**Instalação do gerenciador de rotas**
 
-``` npm install react-router-dom ```
+`npm install react-router-dom`
 
-__Instalação axios para consumir os dados do backend__
+**Instalação axios para consumir os dados do backend**
 
-``` npm install axios ```
+`npm install axios`
 
 ## [MOBILE - ReactNative]:
 
-__Instalação do Expo em modo global__
+**Instalação do Expo em modo global**
 
-``` npm install -g expo-cli ```
+`npm install -g expo-cli`
 
-__Incialização do projeto mobile__
+**Incialização do projeto mobile**
 
-``` expo init mobile --npm```
-``` select: blank ```
+`expo init mobile --npm`
+`select: blank`
 
-__Entra na pasta mobile__
+**Entra na pasta mobile**
 
-``` cd mobile ```
+`cd mobile`
 
-__Executando o projeto mobile__
+**Executando o projeto mobile**
 
-``` npm start ```
+`npm start`
 
-__Instalação da biblioteca ReactNavigation para o expo__
+**Instalação da biblioteca ReactNavigation para o expo**
 
-````npm install @react-navigation/native ```
+``npm install @react-navigation/native ```
 
-__Instalação das dependencias da biblioteca ReactNavigation para o expo__
-``` expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view ```
+**Instalação das dependencias da biblioteca ReactNavigation para o expo**
+`expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`
 
-__Instalação do StackNavigation (Nota: Existem outras formas de navegação, essa é a mais simples - por botões)__
+**Instalação do StackNavigation (Nota: Existem outras formas de navegação, essa é a mais simples - por botões)**
 
-``` npm install @react-navigation/stack ```
+`npm install @react-navigation/stack`
 
-__Instalação do pacote expo-constants__
+**Instalação do pacote expo-constants**
 
-``` expo install expo-constants ```
+`expo install expo-constants`
 
-__Instalação do pacote para envio de emails__
+**Instalação do pacote para envio de emails**
 
-``` expo install expo-mail-composer ```
+`expo install expo-mail-composer`
 
-__Instalação axios para consumir os dados do backend__
+**Instalação axios para consumir os dados do backend**
 
-``` npm install axios ```
+`npm install axios`
 
-__Instalação do pacote intl para formatação de moeda__
+**Instalação do pacote intl para formatação de moeda**
 
-``` npm install intl ```
+`npm install intl`
