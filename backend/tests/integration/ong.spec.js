@@ -4,6 +4,7 @@ const connection = require("../../src/database/connection");
 
 describe("ONG Unique ID", () => {
   beforeEach(async () => {
+    await connection.migrate.rollback();
     await connection.migrate.latest();
   });
 
