@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 58018,
-  "expoServerNgrokUrl": "https://bu-xf2.anonymous.mobile.exp.direct",
-  "packagerNgrokUrl": "https://packager.bu-xf2.anonymous.mobile.exp.direct",
-  "ngrokPid": 58042
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }
