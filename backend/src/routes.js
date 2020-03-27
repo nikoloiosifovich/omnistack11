@@ -55,9 +55,8 @@ routes.post(
       email: Joi.string()
         .email()
         .required(),
-      whatsapp: Joi.number()
-        .min(13)
-        .max(13)
+      whatsapp: Joi.string()
+        .length(13)
         .required(),
       city: Joi.string().required(),
       uf: Joi.string()
